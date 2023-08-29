@@ -1,0 +1,106 @@
+API Documentation - MMA Event Platform
+
+Introduction:
+The MMA Event Platform API allows you to interact with the platform's database to manage fighters, fights, events, and rankings.
+
+Base URL: http://localhost:3000
+
+Endpoints:
+
+1. Fighters:
+
+   - Create a new fighter
+     POST /fighters
+     Body: JSON representing the new fighter's details
+     Response: JSON representing the created fighter's details
+
+   - Get all fighters
+     GET /fighters
+     Response: JSON array containing details of all fighters
+
+   - Get a specific fighter by ID
+     GET /fighters/:id
+     Response: JSON representing the fighter's details
+
+   - Update a specific fighter by ID
+     PUT /fighters/:id
+     Body: JSON with updated fighter's details
+     Response: JSON representing the updated fighter's details
+
+   - Delete a specific fighter by ID
+     DELETE /fighters/:id
+     Response: JSON message indicating success
+
+2. Events:
+
+   - Create a new event
+     POST /events
+     Body: JSON representing the new event's details
+     Response: JSON representing the created event's details
+
+   - Get all events
+     GET /events
+     Response: JSON array containing details of all events
+
+   - Get a specific event by ID
+     GET /events/:id
+     Response: JSON representing the event's details
+
+   - Update a specific event by ID
+     PUT /events/:id
+     Body: JSON with updated event's details
+     Response: JSON representing the updated event's details
+
+   - Delete a specific event by ID
+     DELETE /events/:id
+     Response: JSON message indicating success
+
+3. Fights:
+
+   - Create a new fight
+     POST /fights
+     Body: JSON representing the new fight's details
+     Response: JSON representing the created fight's details
+
+   - Get all fights
+     GET /fights
+     Response: JSON array containing details of all fights
+
+   - Get a specific fight by ID
+     GET /fights/:id
+     Response: JSON representing the fight's details
+
+   - Update a specific fight by ID
+     PUT /fights/:id
+     Body: JSON with updated fight's details
+     Response: JSON representing the updated fight's details
+
+   - Delete a specific fight by ID
+     DELETE /fights/:id
+     Response: JSON message indicating success
+
+4. Rankings:
+
+   - Rankings are automatically updated after each fight
+
+5. Fight Statistics for a Specific Fighter:
+
+   - Get fight statistics for a specific fighter by ID
+     GET /fighters/:id/statistics
+     Response: JSON representing the fighter's statistics
+
+6. Upcoming Events:
+
+   - Get details of upcoming events
+     GET /events/upcoming
+     Response: JSON array containing details of upcoming events
+
+Error Handling:
+- The API provides appropriate HTTP status codes and error messages for various scenarios.
+- Detailed error messages are included in the response JSON for better understanding of the issue.
+
+Data Validation:
+- Data validation is implemented using express-validator to ensure that the data sent to the API is valid.
+
+Note: Replace ":id" with the actual ID of the resource.
+
